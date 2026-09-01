@@ -5,27 +5,27 @@ package program;
 public class Book {
     private int id;
     private String name;
-    private String author;
+    private Author author;
     private double price;
     private int stock;
 
-    public Book(int id,String name,String author){
+    public Book(int id,String name,Author author){
         this.id = id;
         this.name = name;
         this.author = author;
     }
 
-    public Book(int id,String name, String author, double price) throws Exception{
+    public Book(int id,String name, Author author, double price) throws Exception{
         this(id,name,author);
         setPrice(price);
     }
 
-    public Book(int id,String name,String author, int stock) throws Exception{
+    public Book(int id,String name,Author author, int stock) throws Exception{
         this(id,name,author);
         setStock(stock);
     }
 
-    public Book(int id,String name, String author,double price, int stock) throws Exception{
+    public Book(int id,String name, Author author,double price, int stock) throws Exception{
         this(id,name,author);
         setPrice(price);
         setStock(stock);
@@ -36,7 +36,7 @@ public class Book {
         return this.name;
     }
 
-    public String getAuthor(){
+    public Author getAuthor(){
         return this.author;
     }
 
