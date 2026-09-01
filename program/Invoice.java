@@ -89,7 +89,8 @@ public class Invoice {
     }
 
     public double getTotalAfterDiscount(){
-        return getTotal()*customer.getDiscount();
+        double total =  getTotal();
+        return total - total*(customer.getDiscount()/100);
     }
 
     private void increaseVectors(){
