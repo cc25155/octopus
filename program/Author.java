@@ -1,20 +1,22 @@
+package program;
+
 public class Author {
     private int id;
     private String name;
 
-    public Author(int id,String name){
+    public Author(int id,String name) throws Exception{
         setId(id);
         setName(name);
     }
 
-    private void setId(int id){
+    private void setId(int id) throws Exception{
         if(id < 0){
             throw new Exception("O id não pode ser negativo");
         }
         this.id = id;
     }
 
-    private void setName(String name){
+    private void setName(String name)throws Exception{
         if(name.isBlank() || name.compareTo("") == 0){
             throw new Exception("O nome não pode ser vazio");
         }
